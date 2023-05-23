@@ -62,7 +62,7 @@ def main():
     cap = cv2.VideoCapture(INPUT_PATH)
     fps = cap.get(cv2.CAP_PROP_FPS)
     frameSize = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))
-    codec = cv2.VideoWriter_fourcc(*'mp4v')
+    codec = cv2.VideoWriter_fourcc(*'avc1')
 
     success, frame = cap.read()
     result =  cv2.VideoWriter(OUTPUT_PATH,codec, fps, frameSize)
